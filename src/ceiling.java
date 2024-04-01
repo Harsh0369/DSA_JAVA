@@ -7,10 +7,6 @@ public class ceiling {
         System.out.println("Enter the Target Element:");
         int target = sc.nextInt();
         int ans= search(array,target);
-        while (ans == -1) {
-            target++;
-            ans= search(array,target);
-        }
         System.out.println("The nearest Element is at index number:"+ans);
     }
     static int search(int[] arr,int target){
@@ -27,6 +23,6 @@ public class ceiling {
                 return mid;
             }
         }
-        return -1;
+        return start;
     }
 }
