@@ -2,19 +2,10 @@ import java.util.Arrays;
 
 public class InsertionSort {
     public static void main(String[] args) {
+
         int[] arr={2,4,6,3,7,1};
-        selection(arr);
+        insertion(arr);
         System.out.println(Arrays.toString(arr));
-    }
-    static void selection(int[]arr)
-    {
-        int start =0;
-        for (int i=0;i<arr.length;i++)
-        {
-            int last= arr.length-i-1;
-            int maxIndex = maxIndex(arr,start,last);
-            swap(arr,maxIndex,last);
-        }
     }
     static void swap(int[] arr,int first,int second)
     {
@@ -22,14 +13,17 @@ public class InsertionSort {
         arr[first] = arr[second];
         arr[second] = temp;
     }
-    static int maxIndex(int[] arr,int start,int last){
-        int max = start;
-        for (int i= start;i<=last;i++){
-            if (arr[max]<arr[i])
-            {
-                max=i;
+    static void insertion(int[] arr){
+        for (int i =0; i< arr.length-1;i++){
+            for (int j= i+1;j>0;j--){
+                if (arr[j]<arr[j-1])
+                {
+                    swap(arr,j,j-1);
+                }
+                else{
+                    break;
+                }
             }
         }
-        return max;
     }
 }
