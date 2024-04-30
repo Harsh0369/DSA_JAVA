@@ -1,6 +1,6 @@
 public class FindingMissingNumber {
     public static void main(String[] args) {
-        int[] arr={2,5,3,4};
+        int[] arr={2,1,3,4};
         int n= missingNumber(arr);
         System.out.println("The Missing Number is:"+n);
     }
