@@ -5,6 +5,7 @@ public class MergeSort {
         int[] arr ={5,4,3,2,1};
         int[] arr2= mergeSort(arr);
         System.out.println(Arrays.toString(arr2));
+        System.out.println();
 
     }
     static int[] mergeSort(int[]arr)
