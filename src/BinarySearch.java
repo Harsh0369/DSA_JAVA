@@ -5,14 +5,14 @@ public class BinarySearch {
         int ans= search(array,target);
         System.out.println(ans);
     }
-    static int search(int[] arr,int target){
+    static int search(int[] nums,int target){
         int start = 0;
-        int end = arr.length-1;
+        int end = nums.length-1;
         while (start <= end){
             int mid= start+(end-start)/2;
-            if (target< arr[mid]){
+            if (target< nums[mid]){
                 end= mid-1;
-            } else if (target>arr[mid]) {
+            } else if (target>nums[mid]) {
                 start= mid+1;
             }
             else {
