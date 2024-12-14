@@ -49,7 +49,7 @@ public class BinaryTree {
     }
         private void Display(Node node,String indent)
         {
-            if (node != null) {
+            if (node == null) {
                 return;
             }
             System.out.println(" " + node.value);
