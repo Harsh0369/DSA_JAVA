@@ -66,5 +66,6 @@ public class SegmentTree {
             str = str +"No Right Child";
         }
         System.out.println(str);
+
     }
 }
